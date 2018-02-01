@@ -1,9 +1,19 @@
-function toCelsius () {
+// Fahrenheit to Celcius Conversion Formula
+// The temperature T in degrees Celsius (°C) is equal to the temperature T in degrees Fahrenheit (°F) minus 32, times 5/9:
 
+
+function toCelsius (tempFahrenheit) {
+    var celciusTemp = (tempFahrenheit - 32) * 0.55555555555);
+    return celciusTemp;
 }
 
-function toFahrenheit () {
 
+// Celsius to Fahrenheit Conversion Formula
+// Multiply the °C temperature by 1.8. Add 32 to this number. This the answer in °F.
+
+function toFahrenheit (tempCelcius) {
+    var fahrenheitTemp = (tempCelcius * 1.8) + 32;
+    return fahrenheitTemp;
 }
 
 // Get a reference to the button element in the DOM

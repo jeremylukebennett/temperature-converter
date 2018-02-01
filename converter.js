@@ -3,7 +3,7 @@
 
 
 function toCelsius (tempFahrenheit) {
-    var celciusTemp = (tempFahrenheit - 32) * 0.55555555555);
+    var celciusTemp = ((tempFahrenheit - 32) * 0.55555555555);
     return celciusTemp;
 }
 
@@ -16,6 +16,10 @@ function toFahrenheit (tempCelcius) {
     return fahrenheitTemp;
 }
 
+
+
+
+// ====================================================================================================================================
 // Get a reference to the button element in the DOM
 var button = document.getElementById("converter");
 

@@ -8,24 +8,32 @@
 </head>
 <body>
 
-    <!-- Radio Buttons -->
+    <!-- Text Input, Radio Buttons and Submit Button -->
     <form>
         <fieldset>
             <legend>Temperature Conversion</legend>
+
+            <label for="inputText" id="value" name="userValue">Input Temperature</label>
+            <input type="text" name="inputValue">
+           
+            <br><br>
+
             <input type="radio" name="tempConversionChoice" id="toFahrenheit" value="small">
             <label for="toFahrenheit">Convert to Fahrenheit</label>
             <br><br>
             <input type="radio" name="tempConversionChoice" id="toCelcius" value="small">
             <label for="toCelcius">Convert to Celcius</label>
+
+            <br><br>
+
+            <button type="button" id="submit-temp">Convert Temperature!</button>
+
         </fieldset>
     </form>
 
-    
 
 
 
-
-    
     <script src="converter.js"></script>
 </body>
 </html>

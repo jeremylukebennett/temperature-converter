@@ -14,3 +14,7 @@ body {
     color: blue;
 
 }
+
+#results {
+    font-size: 4em;
+}

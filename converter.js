@@ -25,53 +25,35 @@ function determineConverter() {
         var celciusResult = toCelsius(userTempInput);
 
 
-        if(celciusResult > 32) {
-            console.log("hot");
-            document.getElementById("results").classList.add("hot");
+        if(celciusResult > 32) {           
+            document.getElementById("results").className = "hot";            
             document.getElementById("results").innerHTML = `${celciusResult}° Celcius`
         }
         else if(celciusResult < 0) {
-            console.log("cold");
-            document.getElementById("results").classList.add("cold");
+            document.getElementById("results").className = "cold";
             document.getElementById("results").innerHTML = `${celciusResult}° Celcius`
 
         }
         else {
+            document.getElementById("results").className = "just-right";
             document.getElementById("results").innerHTML = `${celciusResult}° Celcius`
         }
-
-        
-        // document.getElementById("results").innerHTML = `${celciusResult}° Celcius`
     }
     else if (fahrenheitRadioButton.checked) {
         var fahrenheitResult = toFahrenheit(userTempInput);
 
         if(fahrenheitResult > 90) {
-            console.log("hot");
-            document.getElementById("results").classList.add("hot");
+            document.getElementById("results").className = "hot";
             document.getElementById("results").innerHTML = `${fahrenheitResult}° Fahrenheit`
         }
         else if(fahrenheitResult < 32) {
-            console.log("cold");
-            document.getElementById("results").classList.add("cold");
+            document.getElementById("results").className = "cold";
             document.getElementById("results").innerHTML = `${fahrenheitResult}° Fahrenheit`
-
         }
         else {
+            document.getElementById("results").className = "just-right";
             document.getElementById("results").innerHTML = `${fahrenheitResult}° Fahrenheit`
         }
-
-
-
-
-
-
-
-
-
-
-        // document.getElementById("results").innerHTML = `${fahrenheitResult}° Fahrenheit`
-
     }
 }
 
@@ -81,8 +63,9 @@ function clearField() {
 
 function enterKeySubmit(e) {
     if (e.keyCode === 13) {
+        e.preventDefault();
         determineConverter();
-        document.getElementById("results").classList.add("");
+        
     }
 }
 

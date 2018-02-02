@@ -27,16 +27,16 @@ function determineConverter() {
 
         if(celciusResult > 32) {           
             document.getElementById("results").className = "hot";            
-            document.getElementById("results").innerHTML = `${celciusResult}° Celcius`
+            document.getElementById("results").innerHTML = `${Math.round(celciusResult)}° Celcius`
         }
         else if(celciusResult < 0) {
             document.getElementById("results").className = "cold";
-            document.getElementById("results").innerHTML = `${celciusResult}° Celcius`
+            document.getElementById("results").innerHTML = `${Math.round(celciusResult)}° Celcius`
 
         }
         else {
             document.getElementById("results").className = "just-right";
-            document.getElementById("results").innerHTML = `${celciusResult}° Celcius`
+            document.getElementById("results").innerHTML = `${Math.round(celciusResult)}° Celcius`
         }
     }
     else if (fahrenheitRadioButton.checked) {
@@ -44,15 +44,15 @@ function determineConverter() {
 
         if(fahrenheitResult > 90) {
             document.getElementById("results").className = "hot";
-            document.getElementById("results").innerHTML = `${fahrenheitResult}° Fahrenheit`
+            document.getElementById("results").innerHTML = `${Math.round(fahrenheitResult)}° Fahrenheit`
         }
         else if(fahrenheitResult < 32) {
             document.getElementById("results").className = "cold";
-            document.getElementById("results").innerHTML = `${fahrenheitResult}° Fahrenheit`
+            document.getElementById("results").innerHTML = `${Math.round(fahrenheitResult)}° Fahrenheit`
         }
         else {
             document.getElementById("results").className = "just-right";
-            document.getElementById("results").innerHTML = `${fahrenheitResult}° Fahrenheit`
+            document.getElementById("results").innerHTML = `${Math.round(fahrenheitResult)}° Fahrenheit`
         }
     }
 }

@@ -17,9 +17,9 @@ function toFahrenheit (tempCelcius) {
 }
 
 
-
-
 // ====================================================================================================================================
+
+
 // Get a reference to the button element in the DOM
 var button = document.getElementById("converter");
 
@@ -27,6 +27,19 @@ var button = document.getElementById("converter");
 // happen based on which radio button is selected.
 function determineConverter (clickEvent) {
   console.log("event", clickEvent);
+    userTempInput = document.getElementById("value").value;
+    fahrenheitRadioButton = document.getElementById("toFahrenheit");
+    celciusRadioButton = document.getElementById("toCelcius");
+
+    if (celciusRadioButton.checked) {
+        console.log("to celcius");
+        alert(toCelsius(userTempInput));
+    }
+    else if (fahrenheitRadioButton.checked) {
+        console.log("to fahrenheit")
+        alert(toFahrenheit(userTempInput));
+    }
+
 }
 
 // Assign a function to be executed when the button is clicked
